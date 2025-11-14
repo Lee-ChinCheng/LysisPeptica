@@ -13,16 +13,19 @@ Our web-based AI predictor, LysisPeptica is accessible at https://axp.iis.sinica
 1. Download this repository to your local machine.
 
 2. Navigate to the project directory:
+
 cd LysisPeptica
 
 
 3. Build the docker image:
+
 docker build -t lysispeptica .
 
 
 (wait for some minutes)
 
 4. Test input and output:
+
 docker run --rm \
   -v /your_path/your.fa:/app/data/input.fasta \
   -v /your_output_folder:/app/output \
