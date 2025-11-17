@@ -14,27 +14,32 @@ Our web-based AI predictor, LysisPeptica is accessible at https://axp.iis.sinica
 
 2. Navigate to the project directory:
 
-`cd LysisPeptica`
+```bash
+cd LysisPeptica
+```
 
 
 3. Build the docker image:
 
-`docker build -t lysispeptica .`
-
+```bash
+docker build -t lysispeptica .
+```
 
 (wait for some minutes)
 
 4. Test input and output:
 
-`docker run --rm \
+```bash
+docker run --rm \
   -v /your_path/your.fa:/app/data/input.fasta \
   -v /your_output_folder:/app/output \
-  lysispeptica --thr_id {hemolysis%}`
+  lysispeptica --thr_id [hemolysis%]
+```
 
 
 * replace "/your_path/your.fa" by your input fasta path
 * replace "/your_output_folder" by your preferred folder for output csv file
-* {hemolysis%} wil be 5,10,20,30. default is 10
+* [hemolysis%] wil be 5,10,20,30. default is 10
 
 ---
 
