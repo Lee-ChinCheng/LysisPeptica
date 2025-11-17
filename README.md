@@ -37,9 +37,9 @@ docker run --rm \
 ```
 
 
-* replace "/your_path/your.fa" by your input fasta path
-* replace "/your_output_folder" by your preferred folder for output csv file
-* [hemolysis%] wil be 5,10,20,30. default is 10
+* replace "/your_path/your.fa" with your input FASTA file path.
+* replace "/your_output_folder" with the directory where output CSV files should be written.
+* [hemolysis%] wil be 5,10,20,30. Default is 10.
 
 ---
 
