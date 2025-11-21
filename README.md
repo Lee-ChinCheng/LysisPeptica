@@ -44,14 +44,17 @@ docker run --rm \
 ---
 ### input fasta format
 
+```
 >seq0|Conc=21.5
 QAFQTFKPDWNKIRYDAMKMQTSLGQMKKRFNL
 >seq1|Conc=14.3
 WRPGRWWRPGRWWRPGFGGGRGGPGRW
+```
 
 * concentration unit is ug/ml
 * "|Conc=" can't be removed
-* if concentration is empty (>seq0|Conc=  ), or isn't a number (>seq0|Conc=?ABC!), the system will asign default value, 50 ug/ml.
+* if concentration is empty (>seq0|Conc=  ), or isn't a number (>seq0|Conc=?ABC!), 
+the system will asign default value, 50 ug/ml.
 
 
 ---
