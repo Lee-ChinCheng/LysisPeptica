@@ -235,7 +235,7 @@ def predict(thr_id: int, input_fasta: str, output_csv: str):
 
     #read input fasta
     #idli, seqli, ugmlli = read_fasta_slice(input_fasta, 25, 50)
-    idli, seqli, ugmlli = read_fasta_slice(input_fasta, 50)
+    idli, seqli, ugmlli = read_fasta(input_fasta, 50)
    
 
     ens_li=[]
@@ -324,15 +324,3 @@ if __name__ == "__main__":
 
 
 
-
-
-
-'''
-2025-11-09 00:37:18.691175: 
-I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors 
-from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-2025-11-09 00:37:20.002863: 
-I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2025-11-09 00:37:26.275519: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
-'''
