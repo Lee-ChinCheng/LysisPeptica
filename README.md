@@ -42,6 +42,21 @@ docker run --rm \
 * [hemolysis%] wil be 5,10,20,30. Default is 10.
 
 ---
+### input fasta format
+
+>seq0|Conc=21.5
+QAFQTFKPDWNKIRYDAMKMQTSLGQMKKRFNL
+>seq1|Conc=14.3
+WRPGRWWRPGRWWRPGFGGGRGGPGRW
+
+* concentration unit is ug/ml
+* "|Conc=" can't be removed
+* if concentration is empty (>seq0|Conc=  ), or isn't a number (>seq0|Conc=?ABC!), the system will asign default value, 50 ug/ml.
+
+
+---
 
 ### Encoding
 utilize PC6 (https://github.com/LinTzuTang/PC6-protein-encoding-method) and PepBERT (https://github.com/dzjxzyd/PepBERT)
+
+---
