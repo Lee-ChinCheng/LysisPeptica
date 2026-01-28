@@ -45,6 +45,10 @@ docker run --rm \
 * replace "/your_output_folder" with the directory where output CSV files should be written.
 * [hemolysis%] wil be 5,10,20,30. Default is 10.
 
+
+LysisPeptica were developed  on Linux Ubuntu 22.04.5, Python 3.10.16.  
+A simplified environment.yml will be provided in the future.
+
 ---
 ### Input fasta format
 
