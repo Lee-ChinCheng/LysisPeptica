@@ -5,7 +5,7 @@ A Docker container for therapeutic peptide hemolysis risk prediction. The pipeli
 Therapeutic Peptides or Antimicrobial peptides (AMPs) with high hemolysis risk are unsuitable as drugs, but experimental validation is costly. Our model enables early in silico screening to filter out hemolytic candidates.
 
 <p align="center">
-  <img src="./images/main_concept.png" alt="main_concept" width="700" height="285"/>
+  <img src="./images/main_concept.png" alt="main_concept" width="690" height="300"/>
 </p>
 
 Our web-based AI predictor, LysisPeptica is accessible at https://axp.iis.sinica.edu.tw/hemolysis/

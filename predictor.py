@@ -1,5 +1,4 @@
-import os, sys
-import argparse
+import os, argparse
 import numpy as np, pickle as pk, pandas as pd
 #os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 import tensorflow as tf
@@ -189,10 +188,10 @@ def _slice_sequence(seq_id, conc, full_seq, window, ids, concs, seqs):
 
 def encoded_policy(encoding, mdpath, seqli, ugmlli):
     if encoding =='pc6zs':
-        X_input  = pc6_8d_encode( seqli, ugmlli, encoding, 49 ) #'pc6zs' or 'pc6norm'
+        X_input  = pc6_8d_encode( seqli, ugmlli, encoding, 49 ) 
         #print("===CNN zs predicted prob ===")
     elif encoding =='pc6norm':
-        X_input  = pc6_8d_encode( seqli, ugmlli, encoding, 49 ) #'pc6zs' or 'pc6norm'
+        X_input  = pc6_8d_encode( seqli, ugmlli, encoding, 49 ) 
         #print("===CNN minmax predicted prob ===")
     else: # encoding =='pepbert':
         d160li = pbert_encode(seqli, 49)
@@ -200,8 +199,8 @@ def encoded_policy(encoding, mdpath, seqli, ugmlli):
         #print("===MLP predicted prob ===")
 
     model = tf.keras.models.load_model(mdpath,
-                                            custom_objects={'CustomModel': CustomModel, 'tf': tf,
-                                                            'GlobalMinPooling1D':GlobalMinPooling1D},compile=False)
+                                        custom_objects={'CustomModel': CustomModel, 'tf': tf,
+                                                        'GlobalMinPooling1D':GlobalMinPooling1D},compile=False)
     pred_probs = model.predict(X_input)
     #print(type(pred_probs)) #'numpy.ndarray', 2depth
     #[[0.509743   0.49025705]
@@ -216,8 +215,6 @@ def ensemble_prob(prob_li):
     prob_li = np.array(prob_li)
     ens_prob = prob_li.mean(axis=0)
     return(ens_prob)
-
-
 
 
 
@@ -289,18 +286,13 @@ def predict(thr_id: int, input_fasta: str, output_csv: str):
     results_df = pd.DataFrame({
         'PEPTIDE': idli,
         'HEMOLYSIS THRESHOLD(%)': thrli,
-        'DOSAGE(DEFAULT=50ug/ml)': ugmlli,
+        'DOSAGE(DEFAULT=50µg/ml)': ugmlli,
         'SCORE': ens_probs,
-        'HEMOLYSIS': binaryli
-        })
+        'HEMOLYSIS': binaryli})
     
     results_df.to_csv(output_csv, index=False, float_format='%.4f')
   
        
-    
-
-
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Peptide Hemolysis Prediction")
     parser.add_argument('--input', type=str, required=True, help="Path to the input FASTA file.")
