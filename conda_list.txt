@@ -1,0 +1,248 @@
+# Name                    Version                   Build  Channel
+_libgcc_mutex             0.1                        main  
+_openmp_mutex             4.5                  7_kmp_llvm    conda-forge
+_python_abi3_support      1.0                  hd8ed1ab_2    conda-forge
+absl-py                   2.4.0              pyhd8ed1ab_0    conda-forge
+anyio                     4.12.1             pyhcf101f3_0    conda-forge
+astunparse                1.6.3              pyhd8ed1ab_3    conda-forge
+aws-c-auth                0.7.31               he1a10d6_2    conda-forge
+aws-c-cal                 0.7.4                hae4d56a_2    conda-forge
+aws-c-common              0.9.29               hb9d3cd8_0    conda-forge
+aws-c-compression         0.2.19               h2bff981_2    conda-forge
+aws-c-event-stream        0.4.3                h19b0707_4    conda-forge
+aws-c-http                0.8.10               h14a7884_2    conda-forge
+aws-c-io                  0.14.19              hc9e6898_1    conda-forge
+aws-c-mqtt                0.10.7               hb8d5873_2    conda-forge
+aws-c-s3                  0.6.7                h666547d_0    conda-forge
+aws-c-sdkutils            0.1.19               h2bff981_4    conda-forge
+aws-checksums             0.1.20               h2bff981_1    conda-forge
+aws-crt-cpp               0.28.3               hbe26082_8    conda-forge
+aws-sdk-cpp               1.11.407             h25d6d5c_1    conda-forge
+azure-core-cpp            1.13.0               h935415a_0    conda-forge
+azure-identity-cpp        1.8.0                hd126650_2    conda-forge
+azure-storage-blobs-cpp   12.12.0              hd2e3451_0    conda-forge
+azure-storage-common-cpp  12.7.0               h10ac4d7_1    conda-forge
+azure-storage-files-datalake-cpp 12.11.0              h325d260_1    conda-forge
+backports.zstd            1.3.0           py310h69bd2ac_0    conda-forge
+blas                      2.305                  openblas    conda-forge
+blas-devel                3.11.0          5_h1ea3ea9_openblas    conda-forge
+bottleneck                1.4.2           py310haa0f9ac_1  
+brotli-python             1.1.0           py310hea6c23e_4    conda-forge
+brotlicffi                1.2.0.0         py310hea6c23e_0    conda-forge
+bzip2                     1.0.8                h5eee18b_6  
+c-ares                    1.34.6               hb03c661_0    conda-forge
+ca-certificates           2026.1.4             hbd8a1cb_0    conda-forge
+cached-property           1.5.2                hd8ed1ab_1    conda-forge
+cached_property           1.5.2              pyha770c72_1    conda-forge
+certifi                   2026.1.4           pyhd8ed1ab_0    conda-forge
+cffi                      1.17.1          py310h8deb56e_0    conda-forge
+charset-normalizer        3.4.4              pyhd8ed1ab_0    conda-forge
+click                     8.3.1              pyh8f84b5b_1    conda-forge
+conllu                    6.0.0              pyhd8ed1ab_1    conda-forge
+cpython                   3.10.19         py310hd8ed1ab_3    conda-forge
+cuda-crt-tools            12.9.86              ha770c72_2    conda-forge
+cuda-cudart               12.9.79              h5888daf_0    conda-forge
+cuda-cudart_linux-64      12.9.79              h3f2d84a_0    conda-forge
+cuda-nvcc-tools           12.9.86              he02047a_2    conda-forge
+cuda-nvrtc                12.9.86              hecca717_1    conda-forge
+cuda-nvtx                 12.9.79              hecca717_1    conda-forge
+cuda-nvvm-tools           12.9.86              h4bc722e_2    conda-forge
+cuda-version              12.9                 h4f385c5_3    conda-forge
+cudnn                     8.9.7.29             h092f7fd_3    conda-forge
+dataclasses               0.8                pyhc8e2a94_3    conda-forge
+datasets                  1.11.0             pyhd8ed1ab_0    conda-forge
+dill                      0.4.1              pyhcf101f3_0    conda-forge
+et_xmlfile                2.0.0              pyhd8ed1ab_1    conda-forge
+exceptiongroup            1.3.1              pyhd8ed1ab_0    conda-forge
+filelock                  3.20.3             pyhd8ed1ab_0    conda-forge
+flatbuffers               24.3.25              h59595ed_0    conda-forge
+fsspec                    2026.1.0           pyhd8ed1ab_0    conda-forge
+gast                      0.7.0              pyhd8ed1ab_0    conda-forge
+gflags                    2.2.2             h5888daf_1005    conda-forge
+giflib                    5.2.2                hd590300_0    conda-forge
+glog                      0.7.1                hbabe93e_0    conda-forge
+gmp                       6.3.0                hac33072_2    conda-forge
+gmpy2                     2.2.1           py310h63ebcad_2    conda-forge
+google-pasta              0.2.0              pyhd8ed1ab_2    conda-forge
+grpcio                    1.62.2          py310h1b8f574_0    conda-forge
+h11                       0.16.0             pyhcf101f3_1    conda-forge
+h2                        4.3.0              pyhcf101f3_0    conda-forge
+h5py                      3.15.1          nompi_py310h4aa865e_101    conda-forge
+hdf5                      1.14.6          nompi_h1b119a7_105    conda-forge
+hf-xet                    1.2.1           py310hb823017_0    conda-forge
+hpack                     4.1.0              pyhd8ed1ab_0    conda-forge
+httpcore                  1.0.9              pyh29332c3_0    conda-forge
+httpx                     0.28.1             pyhd8ed1ab_0    conda-forge
+huggingface_hub           1.4.0              pyhd8ed1ab_0    conda-forge
+hyperframe                6.1.0              pyhd8ed1ab_0    conda-forge
+icu                       73.2                 h59595ed_0    conda-forge
+idna                      3.11               pyhd8ed1ab_0    conda-forge
+importlib-metadata        8.7.0              pyhe01879c_1    conda-forge
+importlib_metadata        8.7.0                h40b2b14_1    conda-forge
+inflate64                 1.0.4           py310h7c4b9e2_0    conda-forge
+intel-openmp              2025.0.0          h06a4308_1171  
+jinja2                    3.1.6              pyhcf101f3_1    conda-forge
+keras                     3.11.2             pyh753f3f9_0    conda-forge
+keyutils                  1.6.3                hb9d3cd8_0    conda-forge
+krb5                      1.21.3               h659f571_0    conda-forge
+ld_impl_linux-64          2.44                 h153f514_2  
+libabseil                 20240116.2      cxx17_he02047a_1    conda-forge
+libaec                    1.1.5                h088129d_0    conda-forge
+libarrow                  17.0.0          had3b6fe_16_cpu    conda-forge
+libarrow-acero            17.0.0          h5888daf_16_cpu    conda-forge
+libarrow-dataset          17.0.0          h5888daf_16_cpu    conda-forge
+libarrow-substrait        17.0.0          hf54134d_16_cpu    conda-forge
+libblas                   3.11.0          5_h4a7cf45_openblas    conda-forge
+libbrotlicommon           1.1.0                hb03c661_4    conda-forge
+libbrotlidec              1.1.0                hb03c661_4    conda-forge
+libbrotlienc              1.1.0                hb03c661_4    conda-forge
+libcblas                  3.11.0          5_h0358290_openblas    conda-forge
+libcrc32c                 1.1.2                h9c3ff4c_0    conda-forge
+libcublas                 12.9.1.4             h676940d_1    conda-forge
+libcufft                  11.4.1.4             hecca717_1    conda-forge
+libcurand                 10.3.10.19           h676940d_1    conda-forge
+libcurl                   8.18.0               h4e3cde8_0    conda-forge
+libcusolver               11.7.5.82            h676940d_2    conda-forge
+libcusparse               12.5.10.65           hecca717_2    conda-forge
+libedit                   3.1.20250104    pl5321h7949ede_0    conda-forge
+libev                     4.33                 hd590300_2    conda-forge
+libevent                  2.1.12               hf998b51_1    conda-forge
+libffi                    3.4.4                h6a678d5_1  
+libgcc                    15.2.0               h69a1729_7  
+libgcc-ng                 15.2.0               h166f726_7  
+libgfortran               15.2.0              h69a702a_17    conda-forge
+libgfortran5              15.2.0              h68bc16d_17    conda-forge
+libgomp                   15.2.0               h4751f2c_7  
+libgoogle-cloud           2.29.0               h435de7b_0    conda-forge
+libgoogle-cloud-storage   2.29.0               h0121fbd_0    conda-forge
+libgrpc                   1.62.2               h15f2491_0    conda-forge
+libhwloc                  2.12.1          default_hf1bbc79_1000  
+libjpeg-turbo             3.1.2                hb03c661_0    conda-forge
+liblapack                 3.11.0          5_h47877c9_openblas    conda-forge
+liblapacke                3.11.0          5_h6ae95b6_openblas    conda-forge
+libnghttp2                1.67.0               had1ee68_0    conda-forge
+libnvjitlink              12.9.86              hecca717_2    conda-forge
+libopenblas               0.3.30          pthreads_h94d23a6_4    conda-forge
+libparquet                17.0.0          h39682fd_16_cpu    conda-forge
+libpng                    1.6.54               h421ea60_0    conda-forge
+libprotobuf               4.25.3               hd5b35b9_1    conda-forge
+libre2-11                 2023.09.01           h5a48ba9_2    conda-forge
+libsqlite                 3.51.2               h0c1763c_0    conda-forge
+libssh2                   1.11.1               hcf80075_0    conda-forge
+libstdcxx                 15.2.0               h39759b7_7  
+libstdcxx-ng              15.2.0               hc03a8fd_7  
+libthrift                 0.20.0               h0e7cc3e_1    conda-forge
+libtorch                  2.4.1           cpu_mkl_he3c781b_100    conda-forge
+libutf8proc               2.8.0                hf23e847_1    conda-forge
+libuuid                   1.41.5               h5eee18b_0  
+libuv                     1.51.0               hb03c661_1    conda-forge
+libxcb                    1.17.0               h9b100fa_0  
+libxml2                   2.13.9               h2c43086_0  
+libxslt                   1.1.43               h7a3aeb2_0    conda-forge
+libzlib                   1.3.1                hb25bd0a_0  
+llvm-openmp               20.1.8               h4922eb0_0    conda-forge
+lxml                      6.0.2           py310h93f867a_0    conda-forge
+lz4-c                     1.9.4                hcb278e6_0    conda-forge
+markdown                  3.10.1             pyhcf101f3_0    conda-forge
+markdown-it-py            4.0.0              pyhd8ed1ab_0    conda-forge
+markupsafe                3.0.3           py310h3406613_0    conda-forge
+mdurl                     0.1.2              pyhd8ed1ab_1    conda-forge
+mkl                       2023.2.0         ha770c72_50498    conda-forge
+mkl-service               2.4.1           py310h263290a_1    conda-forge
+mkl_fft                   1.3.10          py310h0528b3e_1    conda-forge
+mkl_random                1.2.8           py310ha000c5e_0    conda-forge
+ml_dtypes                 0.3.2           py310hcc13569_0    conda-forge
+mpc                       1.3.1                h24ddda3_1    conda-forge
+mpfr                      4.2.1                h90cbb55_3    conda-forge
+mpmath                    1.3.0              pyhd8ed1ab_1    conda-forge
+multiprocess              0.70.19         py310h139afa4_0    conda-forge
+multivolumefile           0.2.3              pyhd8ed1ab_1    conda-forge
+namex                     0.1.0              pyhd8ed1ab_0    conda-forge
+nccl                      2.29.2.1             h4d09622_1    conda-forge
+ncurses                   6.5                  h7934f7d_0  
+networkx                  3.4.2              pyh267e887_2    conda-forge
+nomkl                     3.0                           0  
+numexpr                   2.14.1          py310h34a7263_101    conda-forge
+numpy                     1.26.4          py310hc213724_1  
+numpy-base                1.26.4          py310hf387b04_1  
+openblas                  0.3.30          pthreads_h6ec200e_4    conda-forge
+openpyxl                  3.1.5           py310h05b0c27_3    conda-forge
+openssl                   3.6.1                h35e630c_1    conda-forge
+opt_einsum                3.4.0              pyhd8ed1ab_1    conda-forge
+optree                    0.18.0          py310h03d9f68_0    conda-forge
+orc                       2.0.2                h669347b_0    conda-forge
+packaging                 25.0            py310h06a4308_1  
+pandas                    2.2.3           py310h6a678d5_0  
+pip                       25.3               pyhc872135_0  
+protobuf                  4.25.3          py310h0e2eeba_1    conda-forge
+psutil                    7.2.2           py310h139afa4_0    conda-forge
+pthread-stubs             0.3                  h0ce48e5_1  
+py7zr                     1.1.2              pyhd8ed1ab_0    conda-forge
+pyarrow                   17.0.0          py310hb7f781d_2    conda-forge
+pyarrow-core              17.0.0          py310hac404ae_2_cpu    conda-forge
+pybcj                     1.0.7           py310h7c4b9e2_1    conda-forge
+pycparser                 2.22               pyh29332c3_1    conda-forge
+pycryptodomex             3.23.0          py310h7c4b9e2_1    conda-forge
+pygments                  2.19.2             pyhd8ed1ab_0    conda-forge
+pyppmd                    1.3.1           py310hea6c23e_1    conda-forge
+pysocks                   1.7.1              pyha55dd90_7    conda-forge
+python                    3.10.16              he870216_1  
+python-dateutil           2.9.0post0      py310h06a4308_2  
+python-flatbuffers        25.9.23            pyh1e1bc0e_0    conda-forge
+python-gil                3.10.19              hd8ed1ab_3    conda-forge
+python-tzdata             2025.3             pyhd3eb1b0_0  
+python-xxhash             3.6.0           py310hf3bd8b6_1    conda-forge
+python_abi                3.10                    2_cp310    conda-forge
+pytorch                   2.4.1           cpu_mkl_py310h1581fbd_100    conda-forge
+pytorch-cpu               2.4.1           cpu_mkl_py312h09a6fac_100    conda-forge
+pytz                      2025.2          py310h06a4308_0  
+pyyaml                    6.0.3           py310h3406613_1    conda-forge
+pyzstd                    0.19.1             pyhd8ed1ab_0    conda-forge
+re2                       2023.09.01           h7f4b329_2    conda-forge
+readline                  8.3                  hc2a1206_0  
+regex                     2026.1.15       py310h7c4b9e2_0    conda-forge
+requests                  2.32.5             pyhcf101f3_1    conda-forge
+rich                      14.3.2             pyhcf101f3_0    conda-forge
+s2n                       1.5.5                h3931f03_0    conda-forge
+safetensors               0.7.0           py310hdfeec95_0    conda-forge
+setuptools                80.10.2         py310h06a4308_0  
+shellingham               1.5.4              pyhd8ed1ab_2    conda-forge
+six                       1.17.0          py310h06a4308_0  
+sleef                     3.9.0                ha0421bc_0    conda-forge
+snappy                    1.2.2                h03e3b7b_1    conda-forge
+sniffio                   1.3.1              pyhd8ed1ab_2    conda-forge
+sqlite                    3.51.1               he0a8d7e_0  
+sympy                     1.14.0           pyh2585a3b_105    conda-forge
+tbb                       2021.13.0            h8d10470_4    conda-forge
+tbb-devel                 2021.13.0            h74b38a2_4    conda-forge
+tensorboard               2.16.2             pyhd8ed1ab_0    conda-forge
+tensorboard-data-server   0.7.0           py310hf0f1799_4    conda-forge
+tensorflow                2.16.1          cuda120py310hfaee7bf_0    conda-forge
+tensorflow-base           2.16.1          cuda120py310h68a2f4f_0    conda-forge
+tensorflow-estimator      2.16.1          cuda120py310h1fd330c_0    conda-forge
+termcolor                 3.3.0              pyhd8ed1ab_0    conda-forge
+texttable                 1.7.0              pyhd8ed1ab_1    conda-forge
+tk                        8.6.15               h54e0aa7_0  
+tokenizers                0.22.2          py310h4551fc8_0    conda-forge
+tqdm                      4.49.0             pyh9f0ad1d_0    conda-forge
+transformers              5.0.0              pyhd8ed1ab_0    conda-forge
+typer-slim                0.21.1             pyhcf101f3_0    conda-forge
+typing-extensions         4.15.0               h396c80c_0    conda-forge
+typing_extensions         4.15.0             pyhcf101f3_0    conda-forge
+tzdata                    2025c                he532380_0  
+urllib3                   2.5.0              pyhd8ed1ab_0    conda-forge
+werkzeug                  3.1.5              pyhcf101f3_0    conda-forge
+wheel                     0.46.3          py310h06a4308_0  
+wrapt                     2.1.1           py310h7c4b9e2_0    conda-forge
+xorg-libx11               1.8.12               h9b100fa_1  
+xorg-libxau               1.0.12               h9b100fa_0  
+xorg-libxdmcp             1.1.5                h9b100fa_0  
+xorg-xorgproto            2024.1               h5eee18b_1  
+xxhash                    0.8.3                hb47aa4a_0    conda-forge
+xz                        5.6.4                h5eee18b_1  
+yaml                      0.2.5                h280c20c_3    conda-forge
+zipfile-deflate64         0.2.0           py310h2372a71_4    conda-forge
+zipp                      3.23.0             pyhcf101f3_1    conda-forge
+zlib                      1.3.1                hb25bd0a_0  
+zstandard                 0.25.0          py310h139afa4_1    conda-forge
+zstd                      1.5.7                hb78ec9c_6    conda-forge
