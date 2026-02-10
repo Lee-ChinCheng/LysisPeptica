@@ -119,29 +119,36 @@ def pc6_8d_encode( inpli, ugmlli, pram, tar_len ):
 
  
 
-def add_conc_on_pepbert_array(inpli, seqli, ugmlli):
-    #Min_ugml, Max_ugml = 0.2, 250 
+def add_conc_on_pepbert_array(n_pram, inpli, seqli, ugmlli): 
+    Min_ugml, Max_ugml = 0.2, 250 
     Min_uM, Max_uM = 0.02, 128
-    pbert_c_min, pbert_c_max, Shift = -2.3, 2.3, 2.3 #-3,3,3
+    c_min_ugml, c_max_ugml, shift_ugml = -1.314, 1.314, 1.314 #2.63
+    c_min_uM, c_max_uM, shift_uM = -2.3, 2.3, 2.3 
 
     op_li=[]
+    
     for idx,arr in enumerate(inpli):
         ugml = ugmlli[idx]
         uM = ugml_to_uM( seqli[idx], ugml )
         
-        #if ugml <= Min_ugml:    nm_ugml = pbert_c_min 
-        #elif ugml >= Max_ugml:  nm_ugml = pbert_c_max 
-        #else:
-        #    times=2*Shift
-        #    nm_ugml = round( (  times*(ugml - Min_ugml) / (Max_ugml - Min_ugml) - Shift  ) , 3)
-        if uM <= Min_uM:    nm_uM = pbert_c_min 
-        elif uM >= Max_uM:  nm_uM = pbert_c_max 
-        else:
-            times=2*Shift
-            nm_uM = round( (  times*(uM - Min_uM) / (Max_uM - Min_uM) - Shift  ) , 3)
+        if n_pram == 'pepbert_ugml':
+
+            if ugml <= Min_ugml:    nm_c = c_min_ugml 
+            elif ugml >= Max_ugml:  nm_c = c_max_ugml 
+            else:
+                times=2*shift_ugml
+                nm_c = round( (  times*(ugml - Min_ugml) / (Max_ugml - Min_ugml) - shift_ugml  ) , 3)
+    
+        else: #'pepbert_um'
+
+            if uM <= Min_uM:    nm_c = c_min_uM
+            elif uM >= Max_uM:  nm_c = c_max_uM 
+            else:
+                times=2*shift_uM
+                nm_c = round( (  times*(uM - Min_uM) / (Max_uM - Min_uM) - shift_uM  ) , 3)
 
    
-        col = np.full((arr.shape[0], 1), nm_uM)
+        col = np.full((arr.shape[0], 1), nm_c)
         # Concatenate along axis=1 (horizontally)
         arr161d = np.hstack((arr, col))
         op_li.append(arr161d)

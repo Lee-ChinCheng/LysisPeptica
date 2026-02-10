@@ -189,14 +189,18 @@ def _slice_sequence(seq_id, conc, full_seq, window, ids, concs, seqs):
 def encoded_policy(encoding, mdpath, seqli, ugmlli):
     if encoding =='pc6zs':
         X_input  = pc6_8d_encode( seqli, ugmlli, encoding, 49 ) 
-        #print("===CNN zs predicted prob ===")
+        
     elif encoding =='pc6norm':
         X_input  = pc6_8d_encode( seqli, ugmlli, encoding, 49 ) 
-        #print("===CNN minmax predicted prob ===")
-    else: # encoding =='pepbert':
+
+    elif encoding =='pepbert_ugml':
         d160li = pbert_encode(seqli, 49)
-        X_input = add_conc_on_pepbert_array(d160li, seqli, ugmlli)
-        #print("===MLP predicted prob ===")
+        X_input = add_conc_on_pepbert_array(encoding, d160li, seqli, ugmlli)
+
+    else: # encoding =='pepbert_um':
+        d160li = pbert_encode(seqli, 49)
+        X_input = add_conc_on_pepbert_array(encoding, d160li, seqli, ugmlli)
+        
 
     model = tf.keras.models.load_model(mdpath,
                                         custom_objects={'CustomModel': CustomModel, 'tf': tf,
@@ -224,11 +228,15 @@ def predict(thr_id: int, input_fasta: str, output_csv: str):
     #Runs prediction pipeline using the selected models, based on selected hemolysis threshold.
     # models and mapping encodings policy as below
     md_policy={
-        5:[ ('md845613_5240chatt.keras','pepbert') ],
-        10:[('md791836_zs_cnn.keras','pc6zs'), ('md812924_minmax_cnn.keras','pc6norm'),
-            ('md833747_3p1bnMLP.keras','pepbert'),('md855694_chatt.keras','pepbert') ],
-        20:[ ('md742811_1bnMLP.keras','pepbert'),('md749791_2p2bnMLP.keras','pepbert') ],
-        30:[ ('md871776_3bnMLP.keras','pepbert') ]}
+        5:[ ('md845613_5240chatt.keras','pepbert_um') ],
+
+        10:[('p791_836_cnn_zs_5544.keras','pc6zs'), 
+            ('p798_796_cnn2_zs_5545.keras','pc6zs'),
+            ('p763_843_5950_3p1bn_ugml2std.keras','pepbert_ugml'),
+            ('p843_750_5041chatt_ugml2std.keras','pepbert_ugml') ],
+
+        20:[ ('md742811_1bnMLP.keras','pepbert_um'),('md749791_2p2bnMLP.keras','pepbert_um') ],
+        30:[ ('md871776_3bnMLP.keras','pepbert_um') ]}
 
     #read input fasta
     #idli, seqli, ugmlli = read_fasta_slice(input_fasta, 25, 50)
