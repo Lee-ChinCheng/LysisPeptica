@@ -2,12 +2,11 @@ import os, argparse
 import numpy as np, pandas as pd
 #os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 import tensorflow as tf
-from tensorflow import keras
+#from tensorflow import keras
 import torch
 import importlib.util
 from tokenizers import Tokenizer
 from huggingface_hub import hf_hub_download
-# Import the encoding function and config from function.py
 from func import pc6_8d_encode, add_conc_on_pepbert_array
 from func import CustomModel, GlobalMinPooling1D
 
