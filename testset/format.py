@@ -1,5 +1,0 @@
-
-
-#>seq0|Conc=54.61
-#ILPWKCPWWPCRR
-

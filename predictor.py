@@ -208,9 +208,7 @@ def encoded_policy(encoding, mdpath, seqli, ugmlli):
     #print(type(pred_probs)) #'numpy.ndarray', 2depth
     #[[0.509743   0.49025705]
     #[0.7774866  0.22251332]]
-    pred_probs=pred_probs[:, 1]
-    #print(pred_probs)
-    #[0.49025705 0.22251332]]
+    pred_probs=pred_probs[:, 1] #ex: #[0.49025705 0.22251332]]
     return pred_probs 
 
 
@@ -289,7 +287,7 @@ def predict(thr_id: int, input_fasta: str, output_csv: str):
         else:       binaryli.append('No')
    
 
-    print(f"Saving results to {output_csv}...")
+    #print(f"Saving results to {output_csv}...")
     results_df = pd.DataFrame({
         'PEPTIDE': idli,
         'HEMOLYSIS THRESHOLD(%)': thrli,
