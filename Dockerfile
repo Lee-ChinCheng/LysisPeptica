@@ -25,6 +25,4 @@ RUN mkdir /app/output
 
 # 7. Set the default command (ENTRYPOINT)
 # This now passes the standard I/O paths.
-ENTRYPOINT ["conda", "run", "-n", "test310", "python", "predictor.py", \
-            "--input", "/app/data/input.fasta", \
-            "--output", "/app/output/predictions.csv"]
+ENTRYPOINT ["conda", "run", "-n", "test310", "python", "predictor.py", "--input", "/app/data/input.fasta", "--output", "/app/output/predictions.csv"]

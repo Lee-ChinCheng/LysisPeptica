@@ -158,9 +158,7 @@ def add_conc_on_pepbert_array(n_pram, inpli, seqli, ugmlli):
 
 
 class CustomModel(tf.keras.Model):
-
     def __init__(self, **kwargs):
-
         super(CustomModel, self).__init__(**kwargs)
 
 

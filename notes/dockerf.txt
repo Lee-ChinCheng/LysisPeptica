@@ -1,0 +1,32 @@
+FROM continuumio/miniconda3:latest
+
+WORKDIR /app
+
+COPY environment.yml .
+
+RUN conda env create -f environment.yml && conda clean -afy
+
+SHELL ["/bin/bash", "-lc"]
+
+RUN mkdir -p /app/data /app/output /opt/hf_cache
+
+ENV HF_HOME=/opt/hf_cache
+ENV HUGGINGFACE_HUB_CACHE=/opt/hf_cache/hub
+ENV TRANSFORMERS_CACHE=/opt/hf_cache/transformers
+
+COPY models/ /app/models/
+COPY config.py /app/
+COPY func.py /app/
+COPY model.py /app/
+COPY predictor.py /app/
+COPY tokenizer.json /app/
+COPY UniRef50_len_0_50loss.csv /app/
+
+RUN conda run -n test310 python -c "from huggingface_hub import snapshot_download; snapshot_download(repo_id='dzjxzyd/PepBERT-small-UniParc')" && \
+    chmod -R a+rX /opt/hf_cache && \
+    conda clean -afy
+
+ENV HF_HUB_OFFLINE=1
+ENV TRANSFORMERS_OFFLINE=1
+
+ENTRYPOINT ["conda", "run", "--no-capture-output", "-n", "test310", "python", "/app/predictor.py", "--input", "/app/data/input.fasta", "--output", "/app/output/predictions.csv"]
