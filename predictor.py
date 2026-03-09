@@ -1,8 +1,8 @@
 import os, argparse
 import numpy as np, pandas as pd
 #os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 import tensorflow as tf
-#from tensorflow import keras
 import torch
 import importlib.util
 from tokenizers import Tokenizer
@@ -219,8 +219,6 @@ def ensemble_prob(prob_li):
 
 
 
-
-
 def predict(thr_id: int, input_fasta: str, output_csv: str):
     #Runs prediction pipeline using the selected models, based on selected hemolysis threshold.
     # models and mapping encodings policy as below
@@ -249,8 +247,7 @@ def predict(thr_id: int, input_fasta: str, output_csv: str):
         
     elif thr_id==10:
         for p in md_policy[thr_id]:
-            mdpath = f'/app/models/thr10/{p[0]}' 
-            #print('\n',mdpath)           
+            mdpath = f'/app/models/thr10/{p[0]}'        
             pred_probs = encoded_policy(p[1], mdpath, seqli, ugmlli)
             ens_li.append(pred_probs)
         
@@ -277,7 +274,6 @@ def predict(thr_id: int, input_fasta: str, output_csv: str):
     #print(ens_probs)
 
 
-    # Save to CSV
     thrli=[]
     for i in range(len(idli)):
         thrli.append(thr_id)
