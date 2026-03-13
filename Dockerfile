@@ -12,11 +12,11 @@ RUN conda env create -f environment.yml
 
 # 5. Copy the models, encoding function, and prediction script
 COPY models/ /app/models/
+COPY hf_hub/ /app/hf_hub/
 COPY config.py .
 COPY func.py .
 COPY model.py .
 COPY predictor.py .
-COPY tokenizer.json .
 COPY UniRef50_len_0_50loss.csv .
 
 # 6. Create directories for I/O

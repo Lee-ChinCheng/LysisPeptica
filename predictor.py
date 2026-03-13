@@ -1,54 +1,37 @@
 import os, argparse
 import numpy as np, pandas as pd
 #os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
-os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3" #warning of CPU , GPU utilization
 import tensorflow as tf
 import torch
-import importlib.util
 from tokenizers import Tokenizer
-from huggingface_hub import hf_hub_download
-from func import pc6_8d_encode, add_conc_on_pepbert_array
-from func import CustomModel, GlobalMinPooling1D
-
+from .config import get_config
+from .model import build_transformer
+from .func import pc6_8d_encode, add_conc_on_pepbert_array
+from .func import CustomModel, GlobalMinPooling1D
 
 
 
 ###==== pepBERT encoding ====
-###
-###
-repo_id, tmodel_name = "dzjxzyd/PepBERT-small-UniParc", "tmodel_16.pt"  
-
-# Function to download and load a Python module from the Hugging Face Hub.
-def load_module_from_hub(repo_id, filename):
-    file_path = hf_hub_download(repo_id=repo_id, filename=filename)
-    module_name = os.path.splitext(os.path.basename(file_path))[0]
-    spec = importlib.util.spec_from_file_location(module_name, file_path)
-    module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
-    return module
-
-# 1) Download and load model.py and config.py dynamically.
-model_module = load_module_from_hub(repo_id, "model.py")
-config_module = load_module_from_hub(repo_id, "config.py")
-build_transformer = model_module.build_transformer
-get_config = config_module.get_config
-
-# 2) Download tokenizer.json and load the tokenizer.
-tokenizer_path = hf_hub_download(repo_id=repo_id, filename="tokenizer.json")
+ 
+# 2) recall tokenizer.json and load the tokenizer
+tokenizer_path = 'hf_hub/tokenizer.json'
 tokenizer = Tokenizer.from_file(tokenizer_path)
 
-# 3) Download model weights (tmodel_17.pt).
-weights_path = hf_hub_download(repo_id=repo_id, filename=tmodel_name)
+# 3) recall model weights (has downloaded from hf)
+weights_path = 'hf_hub/tmodel_16.pt'
 
-# 4) Initialize the model structure and load the weights.
+# 4) Initialize the model structure and load the weights
 device = "cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_built() or torch.backends.mps.is_available() else "cpu"
 config = get_config()
+
 model = build_transformer(
     src_vocab_size=tokenizer.get_vocab_size(),
     src_seq_len=config["seq_len"],
     d_model=config["d_model"]
 )
-state = torch.load(weights_path, weights_only=True, map_location=torch.device(device))
+state = torch.load(weights_path, weights_only=True, map_location=torch.device(device)) 
+#default is weights_only=False, will raise a FutureWarning
 model.load_state_dict(state["model_state_dict"])
 model.eval()
 
