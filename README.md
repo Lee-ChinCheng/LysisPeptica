@@ -5,7 +5,7 @@ A Docker container for therapeutic peptide hemolysis risk prediction. The pipeli
 Therapeutic Peptides or Antimicrobial peptides (AMPs) with high hemolysis risk are unsuitable as drugs, but experimental validation is costly. Our model enables early in silico screening to filter out hemolytic candidates.
 
 <p align="center">
-  <img src="./images/main_concept.png" alt="main_concept" width="690" height="300"/>
+  <img src="./images/main_concept.png" alt="main_concept" width="700" height="330"/>
 </p>
 
 Our web-based AI predictor, LysisPeptica is accessible at https://axp.iis.sinica.edu.tw/hemolysis/
@@ -50,9 +50,9 @@ docker run --rm \
 ```
 
 
-* replace "/your_path/your.fa" with your input FASTA file path.
-* replace "/your_output_folder" with the directory where output CSV files should be written.
-* [hemolysis%] wil be 5,10,20,30. Default is 10.
+* replace <span style="color:orange">/your_path/your.fa</span> with your input FASTA file path.
+* replace <span style="color:orange">/your_output_folder</span> with the directory where output CSV files should be written.
+* <span style="color:orange">[hemolysis%]</span> wil be 5,10,20,30. Default is 10.
 * example:
 
 ```bash
@@ -62,9 +62,6 @@ docker run --rm \
   lysispeptica --thr_id 10
 ```
 
-
-LysisPeptica were developed  on Linux Ubuntu 22.04.5, Python 3.10.16.  
-A simplified environment.yml will be provided in the future.
 
 ---
 ### Input fasta format
@@ -99,6 +96,8 @@ idli, seqli, ugmlli = read_fasta_slice(input_fasta, 25, 50)
 ---
 
 ### Details
+LysisPeptica were developed on Linux Ubuntu 22.04.5, Python 3.10.16. 
+
 LysisPeptica utilized 2 encoding methods,
 PC6 (https://github.com/LinTzuTang/PC6-protein-encoding-method) and PepBERT (https://github.com/dzjxzyd/PepBERT)
 

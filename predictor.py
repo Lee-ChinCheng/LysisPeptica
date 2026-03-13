@@ -13,17 +13,18 @@ from func import CustomModel, GlobalMinPooling1D
 
 ###==== pepBERT encoding ====
  
-# 2) recall tokenizer.json and load the tokenizer
+# 1) recall tokenizer.json and load the tokenizer
 tokenizer_path = 'hf_hub/tokenizer.json'
 tokenizer = Tokenizer.from_file(tokenizer_path)
 
-# 3) recall model weights (has downloaded from hf)
+# 2) recall model weights (has downloaded from hf)
 weights_path = 'hf_hub/tmodel_16.pt'
+
+# 3) hyperprams
+config = {"seq_len": 52, "d_model": 160}
 
 # 4) Initialize the model structure and load the weights
 device = "cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_built() or torch.backends.mps.is_available() else "cpu"
-config = {"batch_size": 128, "num_epochs": 200,
-        "lr": 4e-4, "seq_len": 52, "d_model": 160}
 
 model = build_transformer(
     src_vocab_size=tokenizer.get_vocab_size(),
