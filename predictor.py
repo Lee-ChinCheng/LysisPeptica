@@ -5,10 +5,9 @@ os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3" #warning of CPU , GPU utilization
 import tensorflow as tf
 import torch
 from tokenizers import Tokenizer
-from .config import get_config
-from .model import build_transformer
-from .func import pc6_8d_encode, add_conc_on_pepbert_array
-from .func import CustomModel, GlobalMinPooling1D
+from model import build_transformer
+from func import pc6_8d_encode, add_conc_on_pepbert_array
+from func import CustomModel, GlobalMinPooling1D
 
 
 
@@ -23,7 +22,8 @@ weights_path = 'hf_hub/tmodel_16.pt'
 
 # 4) Initialize the model structure and load the weights
 device = "cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_built() or torch.backends.mps.is_available() else "cpu"
-config = get_config()
+config = {"batch_size": 128, "num_epochs": 200,
+        "lr": 4e-4, "seq_len": 52, "d_model": 160}
 
 model = build_transformer(
     src_vocab_size=tokenizer.get_vocab_size(),

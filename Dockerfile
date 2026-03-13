@@ -13,7 +13,6 @@ RUN conda env create -f environment.yml
 # 5. Copy the models, encoding function, and prediction script
 COPY models/ /app/models/
 COPY hf_hub/ /app/hf_hub/
-COPY config.py .
 COPY func.py .
 COPY model.py .
 COPY predictor.py .
