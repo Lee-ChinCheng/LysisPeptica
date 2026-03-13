@@ -31,7 +31,16 @@ docker build -t lysispeptica .
 
 (wait for some minutes)
 
-4. Test input and output:
+4. Check docker image existence
+
+```bash
+docker images
+```
+
+(size of the Docker image layers might be 12.7GB)
+
+
+5. Test input and output:
 
 ```bash
 docker run --rm \
@@ -44,6 +53,14 @@ docker run --rm \
 * replace "/your_path/your.fa" with your input FASTA file path.
 * replace "/your_output_folder" with the directory where output CSV files should be written.
 * [hemolysis%] wil be 5,10,20,30. Default is 10.
+* example:
+
+```bash
+docker run --rm \
+  -v /home/eric/test.fa:/app/data/input.fasta \
+  -v /home/eric:/app/output \
+  lysispeptica --thr_id 10
+```
 
 
 LysisPeptica were developed  on Linux Ubuntu 22.04.5, Python 3.10.16.  
@@ -81,7 +98,11 @@ idli, seqli, ugmlli = read_fasta_slice(input_fasta, 25, 50)
 
 ---
 
-### Encoding
-LysisPeptica utilized PC6 (https://github.com/LinTzuTang/PC6-protein-encoding-method) and PepBERT (https://github.com/dzjxzyd/PepBERT)
+### Details
+LysisPeptica utilized 2 encoding methods,
+PC6 (https://github.com/LinTzuTang/PC6-protein-encoding-method) and PepBERT (https://github.com/dzjxzyd/PepBERT)
+
+The required model files and weights from PepBERT's Hugging Face have been included in this repository.
+The Docker image is fully standalone and does not require any external downloads during runtime.
 
 ---
