@@ -50,9 +50,9 @@ docker run --rm \
 ```
 
 
-* replace <span style="color:orange">/your_path/your.fa</span> with your input FASTA file path.
-* replace <span style="color:orange">/your_output_folder</span> with the directory where output CSV files should be written.
-* <span style="color:orange">[hemolysis%]</span> wil be 5,10,20,30. Default is 10.
+* replace **`/your_path/your.fa`** with your input FASTA file path.
+* replace **`/your_output_folder`** with the directory where output CSV files should be written.
+* **`[hemolysis%]`** will be 5, 10, 20, 30. Default is 10.
 * example:
 
 ```bash
