@@ -98,14 +98,14 @@ idli, seqli, ugmlli = read_fasta_slice(input_fasta, 25, 50)
 * /testset/test1_173.fa is test set 1 (data from DBAASP), mentioned in LysisPeptica thesis
 
 * The format of the fasta file is as follows:
->sample_ID    hemolysis%_Conc(µg/mL)_Conc(µM)    normalized concentration
-Sequence
+'>sample_ID    hemolysis%_Conc(µg/mL)_Conc(µM)    normalized concentration'
+'Sequence'
 
 * example:
->18190	50.0_45.0_27.192	0.187
-FLSALWGVAKSLF
->-5670	5.0_256.0_168.9	1
-YSKSLPLSVLNP
+'>18190	50.0_45.0_27.192	0.187'
+'FLSALWGVAKSLF'
+'>-5670	5.0_256.0_168.9	1'
+'YSKSLPLSVLNP'
 
 * field explanation:
 sample_ID:
