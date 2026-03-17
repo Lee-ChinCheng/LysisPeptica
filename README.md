@@ -94,6 +94,36 @@ idli, seqli, ugmlli = read_fasta_slice(input_fasta, 25, 50)
 ```
 
 ---
+### Test Set
+* /testset/test1_173.fa is test set 1 (data from DBAASP), mentioned in LysisPeptica thesis
+
+* The format of the fasta file is as follows:
+>sample_ID    hemolysis%_Conc(µg/mL)_Conc(µM)    normalized concentration
+Sequence
+
+* example:
+>18190	50.0_45.0_27.192	0.187
+FLSALWGVAKSLF
+>-5670	5.0_256.0_168.9	1
+YSKSLPLSVLNP
+
+* field explanation:
+sample_ID:
+A unique identifier for each peptide
+
+hemolysis%:
+The percentage of hemolysis, used to define positive and negative samples.
+
+Conc(µg/mL):
+The concentration(dosage) of the antimicrobial peptide in micrograms per milliliter (µg/mL)
+
+Conc(µM):
+The concentration(dosage) of the antimicrobial peptide in micromolar (µM)
+
+normalized concentration:
+A normalized value based on Conc(µg/mL) for our internal data preprocessing
+
+---
 
 ### Details
 LysisPeptica were developed on Linux Ubuntu 22.04.5, Python 3.10.16. 
