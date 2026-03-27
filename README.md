@@ -112,6 +112,7 @@ YSKSLPLSVLNP
 ```
 
 * field explanation:
+
 sample_ID:
 A unique identifier for each peptide
 
@@ -125,16 +126,16 @@ Conc(µM):
 The concentration(dosage) of the antimicrobial peptide in micromolar (µM)
 
 normalized concentration:
-A normalized value based on Conc(µg/mL) for our internal data preprocessing
+A normalized value based on Conc(µg/mL) for our internal data preprocessing<br>
 
 
-* LysisPeptica was validated by test set 2, from our wet-lab real world data, which isn't public by far
+* LysisPeptica was also validated on Test Set 2, derived from our real-world wet-lab data, which is not publicly available.
 <p align="center">
   <img src="./images/test2_concept.PNG" alt="test2_concept" width="700" height="190"/>
 </p>
 
 <p align="center">
-  <img src="./images/t2_ens_ys0-1.png" alt="t2_ens_ys0-1" width="750" height="615"/>
+  <img src="./images/t2_ens_ys0-1.png" alt="t2_ens_ys0-1" width="700" height="574"/>
 </p>
 
 
