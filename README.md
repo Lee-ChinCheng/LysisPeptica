@@ -94,7 +94,7 @@ idli, seqli, ugmlli = read_fasta_slice(input_fasta, 25, 50)
 ```
 
 ---
-### Test Set
+### Test Set 1 & 2
 * /testset/test1_173.fa is test set 1 (data from DBAASP), mentioned in LysisPeptica thesis
 
 * The format of the fasta file is as follows:
@@ -126,6 +126,17 @@ The concentration(dosage) of the antimicrobial peptide in micromolar (µM)
 
 normalized concentration:
 A normalized value based on Conc(µg/mL) for our internal data preprocessing
+
+
+* LysisPeptica was validated by test set 2, from our wet-lab real world data, which isn't public by far
+<p align="center">
+  <img src="./images/test2_concept.PNG" alt="test2_concept" width="700" height="190"/>
+</p>
+
+<p align="center">
+  <img src="./images/t2_ens_ys0-1.png" alt="t2_ens_ys0-1" width="750" height="615"/>
+</p>
+
 
 ---
 
