@@ -2,7 +2,9 @@
 A Docker container for therapeutic peptide hemolysis risk prediction. The pipeline includes a selectable hemolysis-percentage threshold for prediction (5, 10, 20, or 30%), with 10% set as the default.
 
 ### Main Goal
-Therapeutic Peptides or Antimicrobial peptides (AMPs) with high hemolysis risk are unsuitable as drugs, but experimental validation is costly. Our model enables early in silico screening to filter out hemolytic candidates.
+1. Therapeutic Peptides or Antimicrobial peptides (AMPs) with high hemolysis risk are unsuitable as drugs, but experimental validation is costly. LysisPeptica enables early in silico screening to filter out hemolytic candidates.<br>
+2. Current tools to hemolysis classification often neglect concentration, using only peptide sequences as input. 
+In contrast, LysisPeptica is built to handle dual inputs: sequence and concentration.
 
 <p align="center">
   <img src="./images/main_concept.png" alt="main_concept" width="800" height="400"/>
